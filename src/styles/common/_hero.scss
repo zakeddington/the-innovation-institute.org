@@ -1,0 +1,60 @@
+
+// Hero
+// ---------------------------------------+
+//
+
+.hero {
+	display: block;
+	position: relative;
+	width: 100%;
+
+	@media (min-width: $breakpoint-tablet-min) {
+		height: 55vw;
+	}
+}
+
+.hero-image {
+	background: center center no-repeat;
+	background-size: cover;
+	height: 55vw;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	@media (max-width: $breakpoint-mobile-max) {
+		position: relative;
+	}
+
+	.home & {
+		background-image: url($image-path+'/home/hero.jpg');
+	}
+}
+
+.hero-overlay {
+	background: rgba($color-green, 0.95);
+	bottom: 5%;
+	color: $color-white;
+	font-size: 1.5em;
+	font-weight: bold;
+	left: 10%;
+	padding: 20px;
+	position: absolute;
+	width: 80%;
+
+	@media (max-width: $breakpoint-desktop-wide) {
+		font-size: 1em;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		bottom: auto;
+		left: 0;
+		margin-bottom: 20px;
+		position: relative;
+		width: 100%;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}

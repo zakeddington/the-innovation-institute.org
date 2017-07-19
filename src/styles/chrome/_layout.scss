@@ -1,0 +1,61 @@
+
+// General Page Structure
+// ---------------------------------------+
+//
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	background: $color-beige;
+	min-width: $container-width-min;
+	padding: 0;
+	width: 100%;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: $container-width-max;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+}
+
+// Content Sections/Tiles
+// ---------------------------------------+
+//
+.section {
+	display: block;
+	position: relative;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding: 80px 0;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		padding: 60px 0;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		padding: 40px 0;
+	}
+
+	> .container {
+		height: 100%;
+	}
+}
+
+// Flex grid classes
+// ---------------------------------------+
+//
+
+.flex-row {
+	align-items: center;
+	display: flex;
+	height: 100%;
+}
+
+.flex-column {
+	flex: 1;
+}

@@ -1,0 +1,29 @@
+
+// Mixins
+// ------------------------------------------+
+//
+
+@mixin accelerate() {
+	backface-visibility: hidden;
+	perspective: 1000;
+	transform: translate3d(0,0,0);
+}
+
+@mixin clearfix {
+	&:after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+}
+
+@mixin hide-text() {
+	text-indent: -99999em;
+}
+
+@mixin offscreen() {
+	display: block;
+	left: -999999px;
+	position: absolute;
+	top: -999999px;
+}

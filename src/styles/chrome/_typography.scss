@@ -1,0 +1,214 @@
+
+// Base Typography
+// ---------------------------------------+
+//
+
+body {
+	color: $color-text-default;
+	font-family: $font-family-default;
+	font-weight: 400;
+	line-height: 1.5;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 18px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		font-size: 16px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 14px;
+	}
+}
+
+::selection {
+	background: $color-green;
+	color: $color-white;
+}
+
+a {
+	border-bottom: 1px solid transparent;
+	color: $color-blue;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all $anim-speed ease-out;
+
+	&:hover,
+	&:focus {
+		border-bottom: 1px solid $color-blue;
+	}
+}
+
+h1,
+.h1 {
+	display: block;
+	font-family: $font-family-alt;
+	font-weight: 900;
+	line-height: 1;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 50px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-desktop-wide) {
+		font-size: 40px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 30px;
+	}
+}
+
+h2,
+.h2 {
+	color: $color-blue;
+	font-family: $font-family-alt;
+	font-weight: 300;
+	line-height: 1.2;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 48px;
+		margin-bottom: 20px;
+	}
+
+	@media (min-width: $breakpoint-desktop-wide) {
+		font-size: 58px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		font-size: 38px;
+		margin-bottom: 15px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 32px;
+		margin-bottom: 10px;
+	}
+}
+
+h3,
+.h3 {
+	color: $color-blue;
+	font-family: $font-family-alt;
+	font-weight: 300;
+	line-height: 1.2;
+	margin-bottom: 20px;
+
+	@media (min-width: $breakpoint-tablet-min) {
+		font-size: 30px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+}
+
+h4 {
+	color: $color-blue;
+}
+
+p, ul, ol {
+	margin-bottom: 20px;
+}
+
+// Utility colors
+.text-blue {
+	color: $color-blue;
+}
+
+.text-green {
+	color: $color-green;
+}
+
+.text-red {
+	color: $color-red;
+}
+
+.text-white {
+	color: $color-white;
+}
+
+.text-yellow {
+	color: $color-yellow;
+}
+
+// Custom list styles
+.list-lower-alpha,
+.list-lower-roman,
+.list-numbers {
+	counter-reset: list;
+	margin-left: 4em;
+
+	> li {
+		list-style: none;
+		position: relative;
+
+		&:before {
+			counter-increment: list;
+			left: -1.4em;
+			position: absolute;
+		}
+	}
+}
+
+.list-lower-alpha {
+	> li {
+		&:before {
+			content:  '(' counter(list, lower-alpha) ') ';
+		}
+	}
+}
+
+.list-lower-roman {
+	> li {
+		&:before {
+			content:  '(' counter(list, lower-roman) ') ';
+		}
+	}
+}
+
+.list-numbers {
+	> li {
+		&:before {
+			content:  '(' counter(list) ') ';
+		}
+	}
+}
+
+// Custom font styles
+.big-text {
+	color: $color-blue;
+	line-height: 1;
+	margin-bottom: 0;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 60px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		font-size: 45px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 35px;
+	}
+}
+
+.bigger-text {
+	color: $color-blue;
+	line-height: 1;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 130px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		font-size: 90px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 35px;
+	}
+}

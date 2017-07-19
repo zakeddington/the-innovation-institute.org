@@ -1,0 +1,73 @@
+// sass-lint:disable no-important
+
+// Utility Classes
+// ------------------------------------------+
+//
+
+.clearfix {
+	@include clearfix();
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	margin: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.offscreen {
+	@include offscreen();
+}
+
+.hidden {
+	display: none !important;
+}
+
+.full-width {
+	padding: 0;
+	width: 100%;
+}
+
+@media (max-width: $breakpoint-mobile-max) {
+	.full-width-mobile {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+.hide-text {
+	@include hide-text();
+}
+
+@media (max-width: $breakpoint-mobile-max) {
+	.hide-mobile {
+		display: none !important;
+	}
+}
+
+@media (max-width: $breakpoint-tablet-max) {
+	.hide-mobile-tablet {
+		display: none !important;
+	}
+}
+
+@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+	.hide-tablet {
+		display: none !important;
+	}
+}
+
+@media (min-width: $breakpoint-desktop-min) {
+	.hide-desktop {
+		display: none !important;
+	}
+}

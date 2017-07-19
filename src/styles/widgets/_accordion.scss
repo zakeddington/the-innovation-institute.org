@@ -1,0 +1,49 @@
+
+// Accordion
+// ---------------------------------------+
+//
+
+.accordion {
+	@media (min-width: $breakpoint-tablet-min) {
+		margin: auto;
+		width: 66%;
+	}
+
+	.accordion-header {
+		border-bottom: 1px solid $color-blue-light;
+		display: block;
+		font-size: 36px;
+		padding-bottom: 10px;
+		position: relative;
+
+		@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+			font-size: 33px;
+		}
+
+		.icon {
+			bottom: 0;
+			fill: $color-blue;
+			margin: auto;
+			position: absolute;
+			right: 2%;
+			top: 0;
+			transform: rotate(-180deg);
+			width: 15px;
+		}
+	}
+
+	.accordion-content {
+		background-color: $color-white;
+		padding: 20px;
+	}
+
+	&.closed {
+		.icon {
+			transform: rotate(0deg);
+		}
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+}

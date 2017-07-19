@@ -1,0 +1,26 @@
+
+// SVG icons
+// ---------------------------------------+
+//
+
+#svg-defs {
+	@include offscreen();
+}
+
+.icon {
+	display: inline-block;
+	fill: $color-blue;
+	height: 1em;
+	line-height: 1em;
+	transition: all $anim-speed ease-out;
+	vertical-align: middle;
+	width: 1em;
+}
+
+a:hover,
+a:focus {
+	.icon {
+		fill: $color-text-default;
+		text-decoration: none;
+	}
+}

@@ -1,0 +1,33 @@
+
+// Common styles for desktop and mobile header
+// ---------------------------------------------------+
+//
+
+// Outer Container
+.site-header {
+	background: rgba($color-white, 0.95);
+	height: 60px;
+	position: fixed;
+	width: 100%;
+	z-index: $z-index-header;
+
+	.container {
+		height: 100%;
+	}
+
+	.primary-logo {
+		@include hide-text();
+		background: url($image-path+'/logo-green-black.svg') 0 center no-repeat;
+		background-size: 100% 100%;
+		border: none;
+		display: block;
+		float: left;
+		height: 100%;
+		width: 200px;
+
+		&:hover,
+		&:focus {
+			border: none;
+		}
+	}
+}

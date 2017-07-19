@@ -1,0 +1,57 @@
+// sass-lint:disable space-before-colon
+
+// Config Variables
+// ---------------------------------------+
+//
+
+// Colors
+$color-beige             : #f9f6ee;
+$color-beige-dark        : #f3efe3;
+$color-black             : #000;
+$color-blue              : #007fa3;
+$color-blue-dark         : #004e64;
+$color-blue-light        : #30abce;
+$color-green             : #393;
+$color-green-dark        : #7e9b21;
+$color-grey              : #333;
+$color-grey-med-dark     : #777;
+$color-grey-med          : #b5b5b5;
+$color-grey-med-light    : #c0c0c0;
+$color-grey-light        : #ebebeb;
+$color-grey-lighter      : #f4f4f5;
+$color-red               : #ea3f34;
+$color-white             : #fff;
+$color-yellow            : #f3b827;
+
+$color-text-default      : $color-grey;
+
+// Gradients
+$gradient-blue           : linear-gradient(to bottom, $color-blue-light, $color-blue);
+
+// Paths
+$image-path              : '../img';
+
+// Fonts
+$font-family-default     : 'Roboto Slab', Georgia, 'Times New Roman', serif;
+$font-family-alt         : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Animations
+$anim-speed              : 0.3s;
+
+// Media Queries
+$breakpoint-mobile-max   : 539px;
+$breakpoint-tablet-min   : 540px;
+$breakpoint-tablet-max   : 900px;
+$breakpoint-desktop-min  : 901px;
+$breakpoint-desktop-wide : 1260px;
+
+// Container Sizes
+$container-width-min     : 320px;
+$container-width-max     : 1440px;
+
+// z-index
+$z-index-default         : 1;
+$z-index-header          : 2;
+$z-index-loader          : 3;
+$z-index-modal-overlay   : 4;
+$z-index-modal-window    : 5;

@@ -1,0 +1,36 @@
+// scss-lint:disable SpaceBeforeBrace
+
+// Loading Icon
+// ---------------------------------------+
+//
+
+@keyframes loading-anim {
+	0%   { content: 'Loading |'; }
+	25%  { content: 'Loading /'; }
+	50%  { content: 'Loading -'; }
+	75%  { content: 'Loading \\'; }
+	100% { content: 'Loading |'; }
+}
+
+.loader-overlay {
+	align-items: center;
+	background: transparent($color-black, 0.6);
+	display: flex;
+	height: 100%;
+	left: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: $z-index-loader;
+}
+
+.loader-spinner {
+	display: inline-block;
+	margin: auto;
+
+	&:before {
+		animation: loading-anim 0.5s infinite;
+		content: '';
+	}
+}

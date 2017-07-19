@@ -1,0 +1,50 @@
+
+// Buttons
+// ---------------------------------------+
+//
+
+.button {
+	background: $color-green-dark;
+	color: $color-white;
+	display: inline-block;
+	font-weight: 700;
+	line-height: 1;
+	margin: 0 auto;
+	text-transform: uppercase;
+	transition: all $anim-speed ease-in;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 18px;
+		letter-spacing: 3px;
+		padding: 15px 35px;
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		font-size: 14px;
+		letter-spacing: 2px;
+		padding: 10px 20px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		font-size: 10px;
+		letter-spacing: 1px;
+		padding: 10px 20px;
+	}
+
+	&:hover,
+	&:focus {
+		background: $color-green;
+		border-bottom-color: transparent;
+		text-decoration: none;
+	}
+}
+
+.btn-back {
+	@media (min-width: $breakpoint-tablet-min) {
+		margin-bottom: 60px;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		margin-bottom: 30px;
+	}
+}
