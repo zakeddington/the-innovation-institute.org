@@ -2,6 +2,7 @@
  * Constants
  * @description  Defines application constants
  */
+
 const Constants = {
 	breakpoint : null,  // current breakpoint
 

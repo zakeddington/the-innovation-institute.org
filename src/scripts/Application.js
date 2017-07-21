@@ -4,10 +4,10 @@
  */
 /* eslint-disable no-magic-numbers, no-unused-vars */
 
-import breakpointChange       from 'utilities/BreakpointChange';
-import resizeEndEvent         from 'utilities/ResizeEndEvent';
-import Constants              from 'config/Constants';
-import NavigationView         from 'views/NavigationView';
+import breakpointChange from 'utilities/BreakpointChange';
+import resizeEndEvent   from 'utilities/ResizeEndEvent';
+import Constants        from 'config/Constants';
+import NavigationView   from 'views/NavigationView';
 
 const Application = {
 
