@@ -7,18 +7,23 @@
 import breakpointChange       from 'utilities/BreakpointChange';
 import resizeEndEvent         from 'utilities/ResizeEndEvent';
 import Constants              from 'config/Constants';
+import NavigationView         from 'views/NavigationView';
 
 const Application = {
 
 	initialize() {
-		console.log('init');
 		this._initGlobalEvents();
+		this._initViews();
 	},
 
 	_initGlobalEvents() {
 		breakpointChange();
 		resizeEndEvent();
 	},
+
+	_initViews() {
+		NavigationView.initialize();
+	}
 };
 
 export default Application;

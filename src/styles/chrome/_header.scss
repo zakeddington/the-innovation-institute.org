@@ -3,16 +3,22 @@
 // ---------------------------------------------------+
 //
 
+$_nav-height: 60px;
+
 // Outer Container
 .site-header {
 	background: rgba($color-white, 0.95);
-	height: 60px;
+	font-family: $font-family-sans;
+	height: $_nav-height;
+	overflow: hidden;
 	position: fixed;
+	transition: height $anim-speed ease-in;
 	width: 100%;
 	z-index: $z-index-header;
 
 	.container {
 		height: 100%;
+		position: relative;
 	}
 
 	.primary-logo {
@@ -21,8 +27,10 @@
 		background-size: 100% 100%;
 		border: none;
 		display: block;
-		float: left;
-		height: 100%;
+		height: $_nav-height;
+		left: 20px;
+		position: absolute;
+		top: 0;
 		width: 200px;
 
 		@media (max-width: $breakpoint-mobile-max) {
@@ -32,6 +40,154 @@
 		&:hover,
 		&:focus {
 			border: none;
+		}
+	}
+
+	nav {
+		display: none;
+		height: calc(100% - #{$_nav-height} - 20px);
+		overflow-y: auto;
+		padding: 20px 0;
+		transform: translateY($_nav-height);
+
+		a {
+			border: none;
+			display: block;
+			padding: 0.5em 1em;
+
+			&:hover,
+			&:focus {
+				background: rgba($color-green, 0.15);
+			}
+		}
+
+		ol,
+		ul {
+			margin: 0;
+		}
+
+		ol {
+			> li {
+				margin-bottom: 1em;
+
+				> a {
+					background: $color-green;
+					color: $color-white;
+					font-weight: 900;
+					text-transform: uppercase;
+
+					&:hover,
+					&:focus {
+						background: $color-green-dark;
+					}
+				}
+			}
+		}
+	}
+
+	// Hamburger open/close button
+	.nav-toggle {
+		// background: $color-white;
+		border: none;
+		display: block;
+		height: $_nav-height;
+		position: absolute;
+		right: 20px;
+		text-decoration: none;
+		top: 0;
+		// transition: background $anim-nav-step1 ease;
+		width: $_nav-height;
+
+		// Animated icon (closed state)
+		.bars {
+			background: $color-green;
+			display: inline-block;
+			height: 4px;
+			left: 25%;
+			margin: 0 auto;
+			position: absolute;
+			top: calc(50% - 2px);
+			transition: background $anim-nav-step1 $anim-nav-step2 ease;
+			width: 50%;
+
+			&:before,
+			&:after {
+				background: $color-green;
+				content: '';
+				height: 4px;
+				left: 0;
+				position: absolute;
+				transform-origin: 50% 50%;
+				transition: top $anim-nav-step1 $anim-nav-step2 ease, transform $anim-nav-step1 ease;
+				width: 100%;
+			}
+
+			&:before {
+				top: -10px;
+			}
+
+			&:after {
+				top: 10px;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+
+		&:focus {
+			// background: $color-green;
+		}
+
+		// Offscreen label for closed menu state
+		.is-open-label {
+			display: none;
+		}
+	}
+
+	// Open state
+	// ---------------------------------------+
+	&.is-open {
+		height: 100%;
+
+		.nav-toggle {
+			// background: $color-green;
+		}
+
+		// Hamburger open/close button
+		.bars {
+			background: none;
+			transition: background $anim-nav-step1 0s ease;
+
+			&:before,
+			&:after {
+				// background: $color-white;
+				top: 0;
+				transition: top $anim-nav-step1 ease, transform $anim-nav-step1 $anim-nav-step2 ease;
+			}
+
+			&:before {
+				transform: rotate3d(0, 0, 1, 45deg);
+			}
+
+			&:after {
+				transform: rotate3d(0, 0, 1, -45deg);
+			}
+		}
+
+		// Offscreen label for open menu state
+		.is-open-label {
+			display: inline;
+		}
+
+		.is-closed-label {
+			display: none;
+		}
+
+		nav {
+			display: block;
+			visibility: visible;
 		}
 	}
 }

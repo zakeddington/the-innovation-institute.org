@@ -12,7 +12,7 @@ $color-blue              : #007fa3;
 $color-blue-dark         : #004e64;
 $color-blue-light        : #30abce;
 $color-green             : #393;
-$color-green-dark        : #7e9b21;
+$color-green-dark        : darken($color-green, 5%);
 $color-grey              : #333;
 $color-grey-med-dark     : #777;
 $color-grey-med          : #b5b5b5;
@@ -37,6 +37,8 @@ $font-family-sans        : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-se
 
 // Animations
 $anim-speed              : 0.3s;
+$anim-nav-step1          : 0.15s;
+$anim-nav-step2          : 0.3s;
 
 // Media Queries
 $breakpoint-mobile-max   : 539px;
