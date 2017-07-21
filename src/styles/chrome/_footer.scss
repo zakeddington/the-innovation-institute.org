@@ -7,6 +7,7 @@
 .site-footer {
 	background: $color-grey;
 	color: $color-white;
+	font-family: $font-family-sans;
 	font-size: 18px;
 	padding: 100px 0;
 
@@ -20,20 +21,135 @@
 
 	.flex-row {
 		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			margin-bottom: 30px;
+		}
 	}
 
-	// Base link styles
+	.flex-column {
+		flex: 2;
+
+		@media (max-width: $breakpoint-mobile-max) {
+			flex: 100%;
+		}
+	}
+
+	.footer-bottom {
+		font-size: 0.9em;
+		text-align: center;
+
+		p {
+			margin-bottom: 10px;
+		}
+
+		span {
+			display: inline-block;
+			margin-right: 10px;
+
+			@media (max-width: $breakpoint-tablet-max) {
+				display: block;
+			}
+
+			@media (min-width: $breakpoint-desktop-min) {
+				&::after {
+					content: '•';
+					display: inline-block;
+					margin-left: 10px;
+				}
+			}
+
+			&:last-child {
+				margin-right: 0;
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+
 	a {
-		color: $color-white;
+		color: $color-beige;
+		opacity: 0.7;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			border-bottom: 1px solid $color-blue-light;
-			color: $color-blue-light;
+			border-bottom: 1px solid $color-white;
+			color: $color-white;
+			opacity: 1;
+		}
+	}
 
-			.icon {
-				fill: $color-blue-light;
+	h4 {
+		color: $color-white;
+
+		a {
+			color: $color-white;
+			opacity: 1;
+		}
+	}
+
+	.footer-logo {
+		@include hide-text();
+		background: url($image-path+'/logo-white.svg') 0 0 no-repeat;
+		background-size: contain;
+		border: none;
+		display: block;
+		height: 3em;
+		opacity: 1;
+
+		&:hover,
+		&:focus {
+			border: none;
+		}
+	}
+
+	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+		.logo-column {
+			flex: 100%;
+		}
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		.link-column {
+			flex: 50%;
+		}
+	}
+
+	.social-column {
+		flex: 1;
+
+		h4 {
+			margin-bottom: 10px;
+		}
+
+		li {
+			display: inline-block;
+
+			a {
+				@include hide-text();
+				border: none;
+				display: block;
+				height: 30px;
+				margin-right: 10px;
+				position: relative;
+				width: 30px;
+
+				@media (max-width: $breakpoint-mobile-max) {
+					width: 20px;
+				}
+
+				.icon {
+					fill: $color-white;
+					height: 100%;
+					left: 0;
+					position: absolute;
+					top: 0;
+					width: 100%;
+				}
 			}
 		}
 	}

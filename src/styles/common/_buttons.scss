@@ -4,47 +4,57 @@
 //
 
 .button {
-	background: $color-green-dark;
+	background: rgba($color-black, 0.3);
 	color: $color-white;
 	display: inline-block;
+	font-family: $font-family-sans;
 	font-weight: 700;
 	line-height: 1;
 	margin: 0 auto;
+	padding: 0.75em 1.25em;
 	text-transform: uppercase;
 	transition: all $anim-speed ease-in;
 
-	@media (min-width: $breakpoint-desktop-min) {
-		font-size: 18px;
-		letter-spacing: 3px;
-		padding: 15px 35px;
-	}
-
-	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
-		font-size: 14px;
-		letter-spacing: 2px;
-		padding: 10px 20px;
-	}
-
-	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 10px;
-		letter-spacing: 1px;
-		padding: 10px 20px;
-	}
-
 	&:hover,
 	&:focus {
-		background: $color-green;
+		background: rgba($color-black, 0.5);
 		border-bottom-color: transparent;
 		text-decoration: none;
 	}
-}
 
-.btn-back {
-	@media (min-width: $breakpoint-tablet-min) {
-		margin-bottom: 60px;
+	&.blue {
+		background: $color-blue;
+
+		&:hover,
+		&:focus {
+			background: darken($color-blue, 10%);
+		}
 	}
 
-	@media (max-width: $breakpoint-mobile-max) {
-		margin-bottom: 30px;
+	&.green {
+		background: $color-green;
+
+		&:hover,
+		&:focus {
+			background: darken($color-green, 10%);
+		}
+	}
+
+	&.red {
+		background: $color-red;
+
+		&:hover,
+		&:focus {
+			background: darken($color-red, 10%);
+		}
+	}
+
+	&.yellow {
+		background: $color-yellow;
+
+		&:hover,
+		&:focus {
+			background: darken($color-yellow, 10%);
+		}
 	}
 }

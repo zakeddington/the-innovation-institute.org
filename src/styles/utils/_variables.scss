@@ -6,7 +6,7 @@
 
 // Colors
 $color-beige             : #f9f6ee;
-$color-beige-dark        : #f3efe3;
+$color-beige-dark        : darken($color-beige, 5%);
 $color-black             : #000;
 $color-blue              : #007fa3;
 $color-blue-dark         : #004e64;
@@ -21,7 +21,7 @@ $color-grey-light        : #ebebeb;
 $color-grey-lighter      : #f4f4f5;
 $color-red               : #ea3f34;
 $color-white             : #fff;
-$color-yellow            : #f3b827;
+$color-yellow            : #f1ae07;
 
 $color-text-default      : $color-grey;
 
@@ -32,8 +32,8 @@ $gradient-blue           : linear-gradient(to bottom, $color-blue-light, $color-
 $image-path              : '../img';
 
 // Fonts
-$font-family-default     : 'Roboto Slab', Georgia, 'Times New Roman', serif;
-$font-family-alt         : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif       : 'Roboto Slab', Georgia, 'Times New Roman', serif;
+$font-family-sans        : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Animations
 $anim-speed              : 0.3s;

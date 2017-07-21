@@ -5,7 +5,7 @@
 
 body {
 	color: $color-text-default;
-	font-family: $font-family-default;
+	font-family: $font-family-serif;
 	font-weight: 400;
 	line-height: 1.5;
 
@@ -29,60 +29,44 @@ body {
 
 a {
 	border-bottom: 1px solid transparent;
-	color: $color-blue;
+	color: $color-green;
 	cursor: pointer;
 	text-decoration: none;
 	transition: all $anim-speed ease-out;
 
 	&:hover,
 	&:focus {
-		border-bottom: 1px solid $color-blue;
+		border-bottom: 1px solid $color-green;
 	}
 }
 
 h1,
 .h1 {
 	display: block;
-	font-family: $font-family-alt;
+	font-family: $font-family-sans;
+	font-size: 2em;
 	font-weight: 900;
 	line-height: 1;
-
-	@media (min-width: $breakpoint-desktop-min) {
-		font-size: 50px;
-	}
-
-	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-desktop-wide) {
-		font-size: 40px;
-	}
-
-	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 30px;
-	}
 }
 
 h2,
 .h2 {
 	color: $color-blue;
-	font-family: $font-family-alt;
-	font-weight: 300;
+	font-family: $font-family-sans;
+	font-size: 2.8em;
+	font-weight: 900;
 	line-height: 1.2;
+	text-transform: uppercase;
 
 	@media (min-width: $breakpoint-desktop-min) {
-		font-size: 48px;
 		margin-bottom: 20px;
 	}
 
-	@media (min-width: $breakpoint-desktop-wide) {
-		font-size: 58px;
-	}
-
 	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
-		font-size: 38px;
 		margin-bottom: 15px;
 	}
 
 	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 32px;
 		margin-bottom: 10px;
 	}
 }
@@ -90,23 +74,21 @@ h2,
 h3,
 .h3 {
 	color: $color-blue;
-	font-family: $font-family-alt;
+	font-family: $font-family-sans;
+	font-size: 1.6em;
 	font-weight: 300;
 	line-height: 1.2;
 	margin-bottom: 20px;
 
-	@media (min-width: $breakpoint-tablet-min) {
-		font-size: 30px;
-	}
-
 	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 18px;
 		margin-bottom: 10px;
 	}
 }
 
 h4 {
 	color: $color-blue;
+	font-size: 1.2em;
+	font-weight: 700;
 }
 
 p, ul, ol {
@@ -177,38 +159,6 @@ p, ul, ol {
 	}
 }
 
-// Custom font styles
-.big-text {
-	color: $color-blue;
-	line-height: 1;
-	margin-bottom: 0;
-
-	@media (min-width: $breakpoint-desktop-min) {
-		font-size: 60px;
-	}
-
-	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
-		font-size: 45px;
-	}
-
-	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 35px;
-	}
-}
-
-.bigger-text {
-	color: $color-blue;
-	line-height: 1;
-
-	@media (min-width: $breakpoint-desktop-min) {
-		font-size: 130px;
-	}
-
-	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
-		font-size: 90px;
-	}
-
-	@media (max-width: $breakpoint-mobile-max) {
-		font-size: 35px;
-	}
+.text-light {
+	font-weight: 300;
 }

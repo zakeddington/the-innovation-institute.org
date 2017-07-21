@@ -25,6 +25,10 @@
 		height: 100%;
 		width: 200px;
 
+		@media (max-width: $breakpoint-mobile-max) {
+			width: 45%;
+		}
+
 		&:hover,
 		&:focus {
 			border: none;

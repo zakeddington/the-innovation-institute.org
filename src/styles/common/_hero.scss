@@ -8,21 +8,25 @@
 	position: relative;
 	width: 100%;
 
-	@media (min-width: $breakpoint-tablet-min) {
-		height: 55vw;
+	@media (min-width: $breakpoint-desktop-min) {
+		height: 60vw;
+	}
+
+	@media (max-width: $breakpoint-mobile-max) {
+		padding-top: 60px;
 	}
 }
 
 .hero-image {
 	background: center center no-repeat;
 	background-size: cover;
-	height: 55vw;
+	height: 60vw;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
 
-	@media (max-width: $breakpoint-mobile-max) {
+	@media (max-width: $breakpoint-tablet-max) {
 		position: relative;
 	}
 
@@ -46,10 +50,9 @@
 		font-size: 1em;
 	}
 
-	@media (max-width: $breakpoint-mobile-max) {
+	@media (max-width: $breakpoint-tablet-max) {
 		bottom: auto;
 		left: 0;
-		margin-bottom: 20px;
 		position: relative;
 		width: 100%;
 	}
