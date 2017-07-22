@@ -99,8 +99,10 @@
 	}
 
 	h2 {
+		font-size: 2.8em;
 		margin-bottom: 0;
 		position: relative;
+		text-transform: uppercase;
 		white-space: nowrap;
 		width: 100%;
 	}
@@ -267,15 +269,15 @@
 
 	h2 {
 		color: $color-white;
+		font-size: 2.8em;
 		margin-bottom: 0;
+		text-transform: uppercase;
 	}
 
 	p {
 		font-size: 1.33em;
 	}
 }
-
-
 
 // Two image blade callout
 // ---------------------------------------+
@@ -315,8 +317,6 @@
 		}
 
 		.callout-content {
-			// background: linear-gradient(to bottom, rgba($color-black, 0.1), rgba($color-black, 0));
-			// border-top: 2px solid transparent;
 			color: $color-white;
 			padding: 20px;
 			width: 100%;

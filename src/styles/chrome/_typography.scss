@@ -53,10 +53,11 @@ h2,
 .h2 {
 	color: $color-blue;
 	font-family: $font-family-sans;
-	font-size: 2.8em;
+	font-size: 2.4em;
+	// font-size: 2.8em;
 	font-weight: 900;
 	line-height: 1.2;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 
 	@media (min-width: $breakpoint-desktop-min) {
 		margin-bottom: 20px;
@@ -93,6 +94,16 @@ h4 {
 
 p, ul, ol {
 	margin-bottom: 20px;
+}
+
+// Utility sizes
+.text-large {
+	font-size: 1.33em;
+}
+
+// Utility weights
+.text-light {
+	font-weight: 300;
 }
 
 // Utility colors
@@ -157,8 +168,4 @@ p, ul, ol {
 			content:  '(' counter(list) ') ';
 		}
 	}
-}
-
-.text-light {
-	font-weight: 300;
 }

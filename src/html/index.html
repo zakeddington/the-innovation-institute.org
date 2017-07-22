@@ -6,8 +6,8 @@
 <body class="home">
 	@@include('header.html', {})
 
-	<section class="hero">
-		<div class="hero-image"></div>
+	<section class="hero tall">
+		<div class="hero-image" style="background-image: url(@@img-path/home/hero.jpg)"></div>
 		<div class="hero-overlay">
 			<h1>The Innovation Institute</h1>
 			<p>Empowering people--regardless of their disability--by including them in the process of creating practical assistive devices that increase mobility, self-esteem, and independence; providing opportunities for them to give back to the community; and engaging them in the service of others.</p>
@@ -88,7 +88,7 @@
 					<img src="@@img-path/home/cta-roll.jpg" alt="" />
 					<div class="callout-content">
 						<p>Roll a mile in<br />my <strike>shoes</strike> chair</p>
-						<a href="#" class="button">Read More</a>
+						<a href="/roll-a-mile/" class="button">Read More</a>
 					</div>
 				</div>
 				<div class="callout-box">
@@ -101,7 +101,6 @@
 			</div>
 		</div>
 	</section>
-
 
 	@@include('footer.html', {})
 </body>

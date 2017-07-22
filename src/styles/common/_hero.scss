@@ -4,12 +4,17 @@
 //
 
 .hero {
+	background: $color-grey;
 	display: block;
 	position: relative;
 	width: 100%;
 
 	@media (min-width: $breakpoint-desktop-min) {
-		height: 60vw;
+		height: 500px;
+
+		&.tall {
+			height: 60vw;
+		}
 	}
 
 	@media (max-width: $breakpoint-mobile-max) {
@@ -20,18 +25,15 @@
 .hero-image {
 	background: center center no-repeat;
 	background-size: cover;
-	height: 60vw;
+	height: 100%;
 	left: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
 
 	@media (max-width: $breakpoint-tablet-max) {
+		height: 60vw;
 		position: relative;
-	}
-
-	.home & {
-		background-image: url($image-path+'/home/hero.jpg');
 	}
 }
 
@@ -46,7 +48,12 @@
 	padding: 20px;
 	position: absolute;
 	transform: translateX(-50%);
-	width: 80%;
+	white-space: nowrap;
+
+	.tall & {
+		white-space: normal;
+		width: 80%;
+	}
 
 	@media (max-width: $breakpoint-desktop-wide) {
 		font-size: 1em;
@@ -58,6 +65,10 @@
 		position: relative;
 		transform: none;
 		width: 100%;
+
+		.tall & {
+			width: 100%;
+		}
 	}
 
 	p {
