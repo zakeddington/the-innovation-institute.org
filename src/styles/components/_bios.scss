@@ -1,0 +1,55 @@
+
+// Team Bios
+// ---------------------------------------+
+//
+
+.bio-team {
+	@include clearfix();
+	margin: auto;
+	padding: 40px 0;
+	position: relative;
+
+	@media (max-width: $breakpoint-mobile-max) {
+		border-bottom: 1px solid $color-blue;
+		padding-bottom: 20px;
+	}
+
+	.container {
+		align-items: center;
+		display: flex;
+
+		@media (min-width: $breakpoint-desktop-wide) {
+			width: 80%;
+		}
+
+		@media (max-width: $breakpoint-mobile-max) {
+			display: block;
+		}
+	}
+
+	.bio-content {
+		flex: 1;
+		text-align: center;
+	}
+
+	.bio-desc {
+		color: $color-blue-dark;
+		font-size: 0.8em;
+	}
+
+	.bio-image {
+		background: center center no-repeat;
+		background-size: cover;
+		border-radius: 50%;
+		display: inline-block;
+		height: 0;
+		margin-bottom: 20px;
+		overflow: hidden;
+		padding-top: 80%;
+		width: 80%;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+}

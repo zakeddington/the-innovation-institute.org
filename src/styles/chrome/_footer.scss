@@ -107,7 +107,7 @@
 		}
 	}
 
-	@media (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+	@media (max-width: $breakpoint-tablet-max) {
 		.logo-column {
 			flex: 100%;
 		}
