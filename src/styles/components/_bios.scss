@@ -1,9 +1,11 @@
 
-// Team Bios
+
+// Team & Board Member Bios
 // ---------------------------------------+
 //
 
-.bio-team {
+// Common styles
+.bio {
 	@include clearfix();
 	margin: auto;
 	padding: 40px 0;
@@ -27,29 +29,73 @@
 		}
 	}
 
+	.bio-image {
+
+		img {
+			border-radius: 50%;
+			margin: 0 auto 20px;
+			max-width: 80%;
+			transition: all $anim-speed ease;
+		}
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+}
+
+
+
+// Team Bios
+.bio-team {
+
 	.bio-content {
 		flex: 1;
 		text-align: center;
 	}
 
-	.bio-desc {
+	.bio-subhead {
 		color: $color-blue-dark;
 		font-size: 0.8em;
 	}
+}
 
-	.bio-image {
-		background: center center no-repeat;
-		background-size: cover;
-		border-radius: 50%;
-		display: inline-block;
-		height: 0;
-		margin-bottom: 20px;
-		overflow: hidden;
-		padding-top: 80%;
-		width: 80%;
+
+
+
+// Board Member Bios
+.bio-board {
+
+	&.detail {
+		.container {
+			align-items: flex-start;
+		}
 	}
 
-	h2 {
-		margin-bottom: 0;
+	.bio-image {
+		flex: 1;
+
+		a {
+			img {
+				filter: sepia(0);
+			}
+
+			&:hover,
+			&:focus {
+				img {
+					filter: sepia(0.5);
+				}
+			}
+		}
+	}
+
+	.bio-content {
+		flex: 2;
+		padding-left: 30px;
+	}
+
+	.bio-subhead {
+		font-size: 1.2em;
+		font-weight: 900;
 	}
 }

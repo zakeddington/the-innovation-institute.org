@@ -14,6 +14,8 @@ const Application = {
 	initialize() {
 		this._initGlobalEvents();
 		this._initViews();
+
+		this._initMapOverlay();
 	},
 
 	_initGlobalEvents() {
@@ -23,6 +25,16 @@ const Application = {
 
 	_initViews() {
 		NavigationView.initialize();
+	},
+
+	_initMapOverlay() {
+		let $overlay = $('.map-overlay');
+
+		if ($overlay.length) {
+			$overlay.on('click', () => {
+				$overlay.hide();
+			});
+		}
 	}
 };
 

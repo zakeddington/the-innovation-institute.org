@@ -4,7 +4,7 @@
 //
 
 .hero {
-	background: $color-grey;
+	background: $color-green;
 	display: block;
 	position: relative;
 	width: 100%;
@@ -14,6 +14,16 @@
 
 		&.tall {
 			height: 60vw;
+		}
+
+		&.short {
+			height: auto;
+		}
+	}
+
+	@media (min-width: $breakpoint-tablet-min) {
+		&.short {
+			padding-top: 120px;
 		}
 	}
 
@@ -53,6 +63,10 @@
 	.tall & {
 		white-space: normal;
 		width: 80%;
+	}
+
+	.short & {
+		position: relative;
 	}
 
 	@media (max-width: $breakpoint-desktop-wide) {

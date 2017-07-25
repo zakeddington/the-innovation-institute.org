@@ -1,0 +1,40 @@
+
+
+// Phone / Email
+// ---------------------------------------+
+//
+
+@media (max-width: $breakpoint-mobile-max) {
+	.contact-label {
+		display: block;
+	}
+}
+
+// Google Map
+// ---------------------------------------+
+//
+
+.map-container {
+	height: 30vw;
+	margin: 0 0 30px;
+	position: relative;
+	width: 100%;
+
+	@media (max-width: $breakpoint-tablet-max) {
+		height: 50vw;
+	}
+
+	.map-overlay {
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	iframe {
+		height: 100%;
+		width: 100%;
+	}
+}
