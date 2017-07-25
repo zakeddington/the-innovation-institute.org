@@ -179,6 +179,17 @@ p, ul, ol {
 	}
 }
 
+.list-two-col {
+	@media (min-width: $breakpoint-tablet-min) {
+		column-count: 2;
+		column-gap: 20px;
+	}
+
+	li {
+		padding: 5px 0;
+	}
+}
+
 blockquote {
 	background: $color-beige-dark;
 	font-style: italic;
