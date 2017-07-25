@@ -4,7 +4,7 @@
 // ---------------------------------------+
 //
 
-// Common styles
+// Common styles, Board Members and Memorials
 .bio {
 	@include clearfix();
 	margin: auto;
@@ -29,43 +29,6 @@
 		}
 	}
 
-	.bio-image {
-
-		img {
-			border-radius: 50%;
-			margin: 0 auto 20px;
-			max-width: 80%;
-			transition: all $anim-speed ease;
-		}
-	}
-
-	h2 {
-		margin-bottom: 0;
-	}
-}
-
-
-
-// Team Bios
-.bio-team {
-
-	.bio-content {
-		flex: 1;
-		text-align: center;
-	}
-
-	.bio-subhead {
-		color: $color-blue-dark;
-		font-size: 0.8em;
-	}
-}
-
-
-
-
-// Board Member Bios
-.bio-board {
-
 	&.detail {
 		.container {
 			align-items: flex-start;
@@ -87,6 +50,13 @@
 				}
 			}
 		}
+
+		img {
+			border-radius: 50%;
+			margin: 0 auto 20px;
+			max-width: 80%;
+			transition: all $anim-speed ease;
+		}
 	}
 
 	.bio-content {
@@ -97,5 +67,25 @@
 	.bio-subhead {
 		font-size: 1.2em;
 		font-weight: 900;
+	}
+
+	h2 {
+		margin-bottom: 0;
+	}
+}
+
+
+
+// Team Bios
+.bio-team {
+
+	.bio-content {
+		flex: 1;
+		text-align: center;
+	}
+
+	.bio-subhead {
+		color: $color-blue-dark;
+		font-size: 0.8em;
 	}
 }
