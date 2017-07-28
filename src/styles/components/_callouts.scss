@@ -316,6 +316,17 @@
 			margin: 20px;
 		}
 
+		.callout-image {
+			border: none;
+			transition: opacity $anim-speed ease;
+
+
+			&:hover,
+			&:focus {
+				opacity: 0.75;
+			}
+		}
+
 		.callout-content {
 			color: $color-white;
 			padding: 20px;

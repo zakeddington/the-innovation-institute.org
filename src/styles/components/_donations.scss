@@ -1,0 +1,43 @@
+
+
+// Cash Donations
+// ---------------------------------------+
+//
+
+.donate-list {
+	li {
+		align-items: center;
+		display: flex;
+
+		p {
+			flex: 1;
+
+			&:first-child {
+				max-width: 4.5em;
+			}
+		}
+
+		.donate-value {
+			background: $color-green;
+			border-radius: 50%;
+			color: $color-white;
+			display: inline-block;
+			flex: 1;
+			font-size: 1.2em;
+			font-weight: bold;
+			height: 3em;
+			line-height: 3em;
+			text-align: center;
+			width: 3em;
+
+		}
+
+		@for $i from 0 to 10 {
+			&:nth-child(#{$i}) {
+				.donate-value {
+					background: darken($color-green, $i * 3%);
+				}
+			}
+		}
+	}
+}
