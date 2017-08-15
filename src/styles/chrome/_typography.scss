@@ -36,7 +36,8 @@ a {
 
 	&:hover,
 	&:focus {
-		border-bottom: 1px solid $color-green;
+		border-bottom: 1px solid $color-grey;
+		color: $color-grey;
 	}
 }
 

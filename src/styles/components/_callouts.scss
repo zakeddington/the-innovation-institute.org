@@ -45,6 +45,7 @@
 		max-height: 400px;
 		max-width: 400px;
 		overflow: hidden;
+		position: relative;
 		width: 20vw;
 
 		@media (max-width: $breakpoint-tablet-max) {
@@ -301,7 +302,6 @@
 
 	.callout-box {
 		align-items: center;
-		border-radius: 4px;
 		display: flex;
 		flex-basis: calc(100% - 20px);
 		flex-direction: column;

@@ -58,3 +58,37 @@
 		}
 	}
 }
+
+.arrow-back {
+	display: inline-block;
+	position: relative;
+
+	&::before,
+	&::after {
+		border-left: 1px solid $color-green;
+		content: '';
+		height: 1em;
+		left: -1em;
+		position: absolute;
+		top: 0.25em;
+		transform-origin: 50%;
+		transition: all $anim-speed ease-out;
+		width: 1em;
+	}
+
+	&::before {
+		transform: rotate(45deg);
+	}
+
+	&::after {
+		transform: rotate(-45deg);
+	}
+
+	&:hover,
+	&:focus {
+		&::before,
+		&::after {
+			border-color: $color-grey;
+		}
+	}
+}
