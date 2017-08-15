@@ -9,24 +9,15 @@ $color-beige             : #f9f6ee;
 $color-beige-dark        : darken($color-beige, 5%);
 $color-black             : #000;
 $color-blue              : #007fa3;
-$color-blue-dark         : #004e64;
-$color-blue-light        : #30abce;
+$color-blue-dark         : darken($color-blue, 10%);
 $color-green             : #393;
 $color-green-dark        : darken($color-green, 5%);
 $color-grey              : #333;
-$color-grey-med-dark     : #777;
-$color-grey-med          : #b5b5b5;
-$color-grey-med-light    : #c0c0c0;
-$color-grey-light        : #ebebeb;
-$color-grey-lighter      : #f4f4f5;
 $color-red               : #ea3f34;
 $color-white             : #fff;
 $color-yellow            : #f1ae07;
 
 $color-text-default      : $color-grey;
-
-// Gradients
-$gradient-blue           : linear-gradient(to bottom, $color-blue-light, $color-blue);
 
 // Paths
 $image-path              : '../img';
