@@ -39,7 +39,7 @@ module.exports = function (grunt) {
 		},
 
 		copy: {
-			files: ['<%= sourceImages %>/**/*.*', '<%= sourceData %>/**/*.*'],
+			files: ['<%= sourceImages %>/**/*.*'],
 			tasks: ['newer:copy:dev']
 		}
 	};

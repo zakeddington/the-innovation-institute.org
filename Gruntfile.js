@@ -35,7 +35,6 @@ module.exports = function(grunt) {
 			// source file paths
 			sourcePath      : './src',
 			sourceAssets    : '<%= sourcePath %>/assets',
-			sourceData      : '<%= sourcePath %>/data',
 			sourceHTML      : '<%= sourcePath %>/html',
 			sourceIncludes  : '<%= sourceHTML %>/_includes',
 			sourceScripts   : '<%= sourcePath %>/scripts',
@@ -47,7 +46,6 @@ module.exports = function(grunt) {
 			// local file paths
 			localPath       : './_builds/local',
 			localAssets     : '<%= localPath %>/assets',
-			localData       : '<%= localAssets %>/data',
 			localImages     : '<%= localAssets %>/img',
 			localScripts    : '<%= localAssets %>/js',
 			localStyles     : '<%= localAssets %>/css',
@@ -56,7 +54,6 @@ module.exports = function(grunt) {
 			// public file paths
 			publicPath      : './_builds/public',
 			publicAssets    : '<%= publicPath %>/assets',
-			publicData      : '<%= publicAssets %>/data',
 			publicImages    : '<%= publicAssets %>/img',
 			publicScripts   : '<%= publicAssets %>/js',
 			publicStyles    : '<%= publicAssets %>/css',

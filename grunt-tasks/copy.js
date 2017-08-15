@@ -10,12 +10,6 @@ module.exports = function (grunt) {
 		dev: {
 			files: [
 				{
-					cwd: '<%= sourceData %>',
-					src: '**/*.*',
-					dest: '<%= localData %>',
-					expand: true
-				},
-				{
 					cwd: '<%= sourceImages %>',
 					src: '**/*.*',
 					dest: '<%= localImages %>',
@@ -26,12 +20,6 @@ module.exports = function (grunt) {
 
 		dist: {
 			files: [
-				{
-					cwd: '<%= sourceData %>',
-					src: '**/*.*',
-					dest: '<%= publicData %>',
-					expand: true
-				},
 				{
 					cwd: '<%= sourceImages %>',
 					src: '**/*.*',
