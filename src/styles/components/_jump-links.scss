@@ -1,0 +1,20 @@
+
+// Offscreen jump links
+// ---------------------------------------------------+
+//
+
+.skip-links {
+	a:hover,
+	a:focus {
+		background-color: rgba($color-black, 0.9);
+		color: $color-white;
+		font-size: 14px;
+		font-weight: bold;
+		left: 0;
+		padding: 10px;
+		position: fixed;
+		top: 0;
+		transition: none;
+		z-index: 100;
+	}
+}

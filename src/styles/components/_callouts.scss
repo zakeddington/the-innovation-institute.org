@@ -144,13 +144,23 @@
 		}
 	}
 
-	&.yellow {
+	&.green {
 		.callout-content {
-			border-color: $color-yellow;
+			border-color: $color-green-dark;
 		}
 
 		h2 {
-			color: $color-yellow;
+			color: $color-green-dark;
+		}
+	}
+
+	&.purple {
+		.callout-content {
+			border-color: $color-purple;
+		}
+
+		h2 {
+			color: $color-purple;
 		}
 	}
 
@@ -280,7 +290,7 @@
 	}
 }
 
-// Two image blade callout
+// 4 Box callouts on homepage
 // ---------------------------------------+
 //
 
@@ -318,12 +328,17 @@
 
 		.callout-image {
 			border: none;
-			transition: opacity $anim-speed ease;
+			overflow: hidden;
 
+			img {
+				transition: all $anim-speed ease;
+			}
 
 			&:hover,
 			&:focus {
-				opacity: 0.75;
+				img {
+					transform: scale(1.1);
+				}
 			}
 		}
 
@@ -342,7 +357,7 @@
 		}
 
 		&:nth-child(2) {
-			background: $color-yellow;
+			background: $color-purple;
 		}
 
 		&:nth-child(3) {

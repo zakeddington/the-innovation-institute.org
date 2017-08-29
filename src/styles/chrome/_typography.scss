@@ -29,7 +29,7 @@ body {
 
 a {
 	border-bottom: 1px solid transparent;
-	color: $color-green;
+	color: $color-green-dark;
 	cursor: pointer;
 	text-decoration: none;
 	transition: all $anim-speed ease-out;
@@ -122,10 +122,6 @@ p, ul, ol {
 
 .text-white {
 	color: $color-white;
-}
-
-.text-yellow {
-	color: $color-yellow;
 }
 
 // Custom list styles
@@ -256,7 +252,7 @@ blockquote {
 	}
 
 	.source {
-		color: $color-green;
+		color: $color-green-dark;
 		font-style: normal;
 		font-weight: 900;
 		margin-bottom: 0;
