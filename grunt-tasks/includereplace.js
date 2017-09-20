@@ -28,10 +28,10 @@ module.exports = function (grunt) {
 		dist: {
 			options: {
 				globals: {
-					"meta-title": "<%= metaTitle %>",
+					"meta-title" : "<%= metaTitle %>",
 					"meta-desc"  : "<%= pkgDesc %>",
-					"asset-name": "<%= assetName %>",
-					"img-path": "assets/img"
+					"asset-name" : "<%= assetName %>",
+					"img-path"   : "/assets/img"
 				},
 				includesDir: '<%= sourceIncludes %>'
 			},
