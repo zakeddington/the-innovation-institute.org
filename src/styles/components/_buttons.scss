@@ -10,8 +10,9 @@
 	font-family: $font-family-sans;
 	font-weight: 700;
 	line-height: 1;
-	margin: 0 auto;
+	margin: 0 auto 5px;
 	padding: 0.75em 1.25em;
+	position: relative;
 	text-transform: uppercase;
 	transition: all $anim-speed ease-in;
 
@@ -56,6 +57,35 @@
 		&:hover,
 		&:focus {
 			background: darken($color-purple, 10%);
+		}
+	}
+
+	&.video {
+		padding-left: 2.5em;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		&:before {
+			border-bottom: 0.4em solid transparent;
+			border-left: 0.75em solid $color-white;
+			border-top: 0.4em solid transparent;
+			height: 0;
+			left: 1em;
+			width: 0;
+		}
+
+		&:after {
+			border: 1px solid $color-white;
+			border-radius: 50%;
+			height: 1.5em;
+			left: 0.5em;
+			width: 1.5em;
 		}
 	}
 }

@@ -1,0 +1,133 @@
+
+// Close button
+// -----------------------------------------------------
+//
+
+.modal-close {
+	@include hide-text();
+	border: 1px solid transparent;
+	display: block;
+	height: 50px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 50px;
+	z-index: $z-index-default;
+
+	@media (max-width: $breakpoint-mobile-max) {
+		height: 30px;
+		width: 30px;
+	}
+
+	&:before,
+	&:after {
+		background: $color-white;
+		content: '';
+		display: block;
+		height: 100%;
+		left: 50%;
+		opacity: 1;
+		position: absolute;
+		top: 0;
+		width: 2px;
+	}
+
+	&:before {
+		transform: rotate(45deg);
+	}
+
+	&:after {
+		transform: rotate(-45deg);
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $color-red;
+
+		&:before,
+		&:after {
+			background: $color-red;
+		}
+	}
+}
+
+// Modal Window
+// ---------------------------------------+
+//
+
+#modal-overlay {
+	background: rgba($color-black, 0.9);
+	display: none;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	transition: all $anim-speed;
+	visibility: hidden;
+	width: 100%;
+	z-index: $z-index-modal-overlay;
+
+	&.active {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+// Initially hide content
+.modal-content {
+	display: none;
+	opacity: 0;
+	transform: translate3d(0,0,0);
+	visibility: hidden;
+}
+
+// Default layout
+.modal-window {
+	backface-visibility: hidden;
+	display: block;
+	height: 100%;
+	left: 50%;
+	margin-top: 50px;
+	opacity: 0;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: all $anim-speed ease-out;
+	visibility: hidden;
+	width: 100%;
+	z-index: $z-index-modal-window;
+
+	::selection {
+		background: $color-white;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&.active {
+		margin-top: 0;
+		opacity: 1;
+		visibility: visible;
+
+		.modal-content {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.modal-content {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		opacity: 0;
+		overflow-y: auto;
+		position: relative;
+		transition: all $anim-speed;
+		transition-delay: $anim-speed;
+		visibility: hidden;
+		width: 100%;
+	}
+}

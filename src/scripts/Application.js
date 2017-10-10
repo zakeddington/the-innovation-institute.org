@@ -9,6 +9,7 @@ import resizeEndEvent   from 'utilities/ResizeEndEvent';
 import VideoLoader      from 'utilities/VideoLoader';
 import Quotes           from 'data/Quotes';
 import NavigationView   from 'views/NavigationView';
+import ModalVideo       from 'widgets/ModalVideo';
 import templateQuote    from 'templates/quote.hbs';
 
 const Application = {
@@ -73,6 +74,8 @@ const Application = {
 				new VideoLoader($(this));
 			})
 		}
+
+		new ModalVideo('.video-trigger');
 	},
 };
 
