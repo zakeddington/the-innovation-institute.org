@@ -6,6 +6,7 @@
 
 import breakpointChange from 'utilities/BreakpointChange';
 import resizeEndEvent   from 'utilities/ResizeEndEvent';
+import VideoLoader      from 'utilities/VideoLoader';
 import Quotes           from 'data/Quotes';
 import NavigationView   from 'views/NavigationView';
 import templateQuote    from 'templates/quote.hbs';
@@ -18,6 +19,7 @@ const Application = {
 
 		this._initMapOverlay();
 		this._initQuotes();
+		this._initVideos();
 	},
 
 	_initGlobalEvents() {
@@ -59,6 +61,16 @@ const Application = {
 				let $html = $(templateQuote(data)).hide();
 				$curTarget.append($html);
 				$html.fadeIn();
+			})
+		}
+	},
+
+	_initVideos() {
+		let $videoContainers = $('.video-player');
+
+		if ($videoContainers.length) {
+			$.each($videoContainers, function() {
+				new VideoLoader($(this));
 			})
 		}
 	},
