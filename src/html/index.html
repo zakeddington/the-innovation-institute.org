@@ -134,13 +134,18 @@
 					</div>
 				</div>
 				<div class="callout-box">
-					<a href="#" class="callout-image">
+					<a href="/donate/" class="callout-image">
 						<img src="@@img-path/home/cta-donate.jpg" alt="Girl making heart symbol with her hands." />
 						<span class="offscreen">Donate Now</span>
 					</a>
 					<div class="callout-content">
 						<p>Tell a Friend.<br />Multiply our Efforts</p>
-						<a href="#" class="button">Donate Now</a>
+						<form class="donate-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="YHM5NSHRJQT78">
+							<input type="submit" class="button" value="Donate Now" />
+							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+						</form>
 					</div>
 				</div>
 			</div>

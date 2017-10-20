@@ -230,10 +230,6 @@ $_nav-height: 60px;
 				text-decoration: none;
 			}
 
-			&:focus {
-				// background: $color-green;
-			}
-
 			// Offscreen label for closed menu state
 			.is-open-label {
 				display: none;
@@ -244,10 +240,6 @@ $_nav-height: 60px;
 		// ---------------------------------------+
 		&.is-open {
 			height: 100%;
-
-			.nav-toggle {
-				// background: $color-green;
-			}
 
 			// Hamburger open/close button
 			.bars {
