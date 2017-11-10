@@ -152,6 +152,8 @@
 }
 
 .arrow-left {
+	margin-left: 2em;
+
 	&::before,
 	&::after {
 		left: -1em;
@@ -159,6 +161,8 @@
 }
 
 .arrow-right {
+	margin-right: 2em;
+
 	&::before,
 	&::after {
 		right: -1em;
