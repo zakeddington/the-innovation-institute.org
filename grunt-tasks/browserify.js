@@ -19,34 +19,31 @@ module.exports = function (grunt) {
 	];
 
 	return {
-
 		options: {
-			transform: ['browserify-handlebars', ['babelify', {
-				presets: ['latest']
-			}]],
+			transform: [
+				['hbsfy', {extensions: ['hbs']}],
+				['babelify']
+			],
 			configure: function(b) {
 				b.plugin(pathmodify, {mods: paths});
 			},
 			browserifyOptions: {
-				extensions: ['.hbs'],
 				fullPaths: false
 			}
 		},
-
 		dev: {
-			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= localScripts %>/<%= assetName %>.js',
 			options: {
 				debug: true
-			}
-		},
-
-		dist: {
+			},
 			src: '<%= sourceScripts %>/initialize.js',
-			dest: '<%= publicScripts %>/<%= assetName %>.js',
+			dest: '<%= localScripts %>/<%= assetName %>.js'
+		},
+		dist: {
 			options: {
 				debug: false
-			}
+			},
+			src: '<%= sourceScripts %>/initialize.js',
+			dest: '<%= publicScripts %>/<%= assetName %>.js'
 		}
 	};
 };

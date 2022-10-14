@@ -8,6 +8,11 @@ module.exports = function (grunt) {
 
 	return {
 		dist: {
+			options: {
+				output: {
+					comments: '/^!/'
+				}
+			},
 			files: [
 				{
 					src: '<%= publicScripts %>/vendor.js',

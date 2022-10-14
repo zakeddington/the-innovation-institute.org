@@ -70,17 +70,19 @@ module.exports = function(grunt) {
 	/**
 	 * Generate an optimized build
 	 */
+	grunt.loadNpmTasks('@lodder/grunt-postcss');
 	grunt.registerTask('build', 'Generate a build', function(environment) {
 		var target = (environment === 'dev') ? 'dev' : 'dist';
 		var tasks = [
 			'clean:' + target,
 			'includereplace:' + target,
 			'copy:' + target,
+			// 'stylelint',
+			'sass:' + target,
+			'postcss:' + target,
 			'eslint',
 			'concat:vendor_' + target,
 			'browserify:' + target,
-			'sass:' + target,
-			'postcss:' + target
 		];
 
 		// Optimize js for dist build only

@@ -4,13 +4,16 @@
  * Compile Sass to CSS
  */
 
+const sass = require('sass');
+
 module.exports = function (grunt) {
 
 	return {
 		dev: {
 			options: {
+				implementation: sass,
 				sourceComments: true,
-				sourcemap: true,
+				sourceMap: true,
 				sourceMapContents: true,
 				outputStyle: 'expanded'
 			},
@@ -21,8 +24,9 @@ module.exports = function (grunt) {
 
 		dist: {
 			options: {
+				implementation: sass,
 				sourceComments: false,
-				sourcemap: false,
+				sourceMap: false,
 				sourceMapContents: false,
 				outputStyle: 'compressed'
 			},

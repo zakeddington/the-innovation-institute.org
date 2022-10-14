@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 
 		styles: {
 			files: ['<%= sourceStyles %>/**/*.scss'],
-			tasks: ['sasslint:dev', 'sass:dev', 'postcss:dev']
+			tasks: ['stylelint','sass:dev', 'postcss:dev']
 		},
 
 		templates: {
