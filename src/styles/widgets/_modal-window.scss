@@ -19,8 +19,8 @@
 		width: 30px;
 	}
 
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		background: $color-white;
 		content: '';
 		display: block;
@@ -32,11 +32,11 @@
 		width: 2px;
 	}
 
-	&:before {
+	&::before {
 		transform: rotate(45deg);
 	}
 
-	&:after {
+	&::after {
 		transform: rotate(-45deg);
 	}
 
@@ -44,8 +44,8 @@
 	&:focus {
 		border-color: $color-red;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			background: $color-red;
 		}
 	}
@@ -79,7 +79,7 @@
 .modal-content {
 	display: none;
 	opacity: 0;
-	transform: translate3d(0,0,0);
+	transform: translate3d(0, 0, 0);
 	visibility: hidden;
 }
 

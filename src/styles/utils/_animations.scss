@@ -5,10 +5,10 @@
 //
 
 @keyframes loading-anim {
-	0%   { content: 'Loading |'; }
-	25%  { content: 'Loading /'; }
-	50%  { content: 'Loading -'; }
-	75%  { content: 'Loading \\'; }
+	0% { content: 'Loading |'; }
+	25% { content: 'Loading /'; }
+	50% { content: 'Loading -'; }
+	75% { content: 'Loading \\'; }
 	100% { content: 'Loading |'; }
 }
 
@@ -29,7 +29,7 @@
 	display: inline-block;
 	margin: auto;
 
-	&:before {
+	&::before {
 		animation: loading-anim 0.5s infinite;
 		content: '';
 	}

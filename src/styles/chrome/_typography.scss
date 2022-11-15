@@ -136,7 +136,7 @@ p, ul, ol {
 		list-style: none;
 		position: relative;
 
-		&:before {
+		&::before {
 			counter-increment: list;
 			left: -1.4em;
 			position: absolute;
@@ -146,32 +146,32 @@ p, ul, ol {
 
 .list-bullet {
 	> li {
-		&:before {
-			content:  '•';
+		&::before {
+			content: '•';
 		}
 	}
 }
 
 .list-lower-alpha {
 	> li {
-		&:before {
-			content:  '(' counter(list, lower-alpha) ') ';
+		&::before {
+			content: '(' counter(list, lower-alpha) ') ';
 		}
 	}
 }
 
 .list-lower-roman {
 	> li {
-		&:before {
-			content:  '(' counter(list, lower-roman) ') ';
+		&::before {
+			content: '(' counter(list, lower-roman) ') ';
 		}
 	}
 }
 
 .list-numbers {
 	> li {
-		&:before {
-			content:  '(' counter(list) ') ';
+		&::before {
+			content: '(' counter(list) ') ';
 		}
 	}
 }

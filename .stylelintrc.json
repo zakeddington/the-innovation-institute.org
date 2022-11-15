@@ -2,7 +2,7 @@
 	"extends": "stylelint-config-sass-guidelines",
 	"rules": {
 		"indentation": "tab",
-		"max-nesting-depth": [5, {
+		"max-nesting-depth": [6, {
 			"ignore": ["blockless-at-rules", "pseudo-classes"]
 		}],
 		"number-no-trailing-zeros": null,

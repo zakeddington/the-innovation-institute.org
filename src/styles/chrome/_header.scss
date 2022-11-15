@@ -24,7 +24,7 @@ $_nav-height: 60px;
 		@include hide-text();
 		background: url($image-path+'/logo-green-black.svg') 0 center no-repeat;
 		background-size: 100% 100%;
-		border: none;
+		border: 0;
 		display: block;
 		height: $_nav-height;
 		left: 20px;
@@ -38,7 +38,7 @@ $_nav-height: 60px;
 
 		&:hover,
 		&:focus {
-			border: none;
+			border: 0;
 		}
 	}
 
@@ -67,7 +67,7 @@ $_nav-height: 60px;
 					text-align: left;
 
 					> a {
-						border: none;
+						border: 0;
 						color: $color-grey;
 						display: block;
 						font-weight: 900;
@@ -117,12 +117,12 @@ $_nav-height: 60px;
 						border-bottom: 1px solid rgba($color-white, 0.1);
 
 						&:last-child {
-							border: none;
+							border: 0;
 						}
 					}
 
 					a {
-						border: none;
+						border: 0;
 						color: $color-grey;
 						display: block;
 						font-size: 16px;
@@ -150,7 +150,7 @@ $_nav-height: 60px;
 			transform: translateY($_nav-height);
 
 			a {
-				border: none;
+				border: 0;
 				display: block;
 				padding: 0.5em 1em;
 
@@ -182,7 +182,7 @@ $_nav-height: 60px;
 		// Hamburger open/close button
 		.nav-toggle {
 			// background: $color-white;
-			border: none;
+			border: 0;
 			display: block;
 			height: $_nav-height;
 			position: absolute;
@@ -204,8 +204,8 @@ $_nav-height: 60px;
 				transition: background $anim-nav-step1 $anim-nav-step2 ease;
 				width: 50%;
 
-				&:before,
-				&:after {
+				&::before,
+				&::after {
 					background: $color-green;
 					content: '';
 					height: 4px;
@@ -216,11 +216,11 @@ $_nav-height: 60px;
 					width: 100%;
 				}
 
-				&:before {
+				&::before {
 					top: -10px;
 				}
 
-				&:after {
+				&::after {
 					top: 10px;
 				}
 			}
@@ -246,18 +246,18 @@ $_nav-height: 60px;
 				background: none;
 				transition: background $anim-nav-step1 0s ease;
 
-				&:before,
-				&:after {
+				&::before,
+				&::after {
 					// background: $color-white;
 					top: 0;
 					transition: top $anim-nav-step1 ease, transform $anim-nav-step1 $anim-nav-step2 ease;
 				}
 
-				&:before {
+				&::before {
 					transform: rotate3d(0, 0, 1, 45deg);
 				}
 
-				&:after {
+				&::after {
 					transform: rotate3d(0, 0, 1, -45deg);
 				}
 			}

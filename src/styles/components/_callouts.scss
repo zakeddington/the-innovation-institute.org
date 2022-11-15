@@ -60,6 +60,15 @@
 		}
 	}
 
+	.callout-image-single {
+		margin: 0 auto;
+
+		@media (max-width: $breakpoint-mobile-max) {
+			left: 0;
+			position: relative;
+		}
+	}
+
 	.callout-image-1 {
 		@media (max-width: $breakpoint-mobile-max) {
 			transform: translateX(-95%);
@@ -327,7 +336,7 @@
 		}
 
 		.callout-image {
-			border: none;
+			border: 0;
 			overflow: hidden;
 
 			img {

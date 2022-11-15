@@ -10,11 +10,11 @@
 	border-radius: 10px;
 	display: inline-block;
 	margin-bottom: 1em;
-	padding: 2em 1em .5em;
+	padding: 2em 1em 0.5em;
 	text-align: center;
 
 	[type='submit'] {
-		border: none;
+		border: 0;
 		cursor: pointer;
 		font-size: 1em;
 	}
@@ -90,15 +90,15 @@
 	&.video {
 		padding-left: 2.5em;
 
-		&:before,
-		&:after {
+		&::before,
+		&::after {
 			content: '';
 			position: absolute;
 			top: 50%;
 			transform: translateY(-50%);
 		}
 
-		&:before {
+		&::before {
 			border-bottom: 0.4em solid transparent;
 			border-left: 0.75em solid $color-white;
 			border-top: 0.4em solid transparent;
@@ -107,7 +107,7 @@
 			width: 0;
 		}
 
-		&:after {
+		&::after {
 			border: 1px solid $color-white;
 			border-radius: 50%;
 			height: 1.5em;

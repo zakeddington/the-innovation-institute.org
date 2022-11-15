@@ -5,46 +5,46 @@
 //
 
 // Colors
-$color-beige             : #f9f6ee;
-$color-beige-dark        : darken($color-beige, 5%);
-$color-black             : #000;
-$color-blue              : #007fa3;
-$color-blue-dark         : darken($color-blue, 10%);
-$color-green             : #393;
-$color-green-dark        : darken($color-green, 15%);
-$color-grey              : #333;
-$color-purple            : #40286b;
-$color-red               : #ea3f34;
-$color-white             : #fff;
+$color-beige: #f9f6ee;
+$color-beige-dark: darken($color-beige, 5%);
+$color-black: #000;
+$color-blue: #007fa3;
+$color-blue-dark: darken($color-blue, 10%);
+$color-green: #393;
+$color-green-dark: darken($color-green, 15%);
+$color-grey: #333;
+$color-purple: #40286b;
+$color-red: #ea3f34;
+$color-white: #fff;
 
-$color-text-default      : $color-grey;
+$color-text-default: $color-grey;
 
 // Paths
-$image-path              : '../img';
+$image-path: '../img';
 
 // Fonts
-$font-family-serif       : 'Roboto Slab', Georgia, 'Times New Roman', serif;
-$font-family-sans        : 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: 'Roboto Slab', Georgia, 'Times New Roman', serif;
+$font-family-sans: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // Animations
-$anim-speed              : 0.3s;
-$anim-nav-step1          : 0.15s;
-$anim-nav-step2          : 0.3s;
+$anim-speed: 0.3s;
+$anim-nav-step1: 0.15s;
+$anim-nav-step2: 0.3s;
 
 // Media Queries
-$breakpoint-mobile-max   : 539px;
-$breakpoint-tablet-min   : 540px;
-$breakpoint-tablet-max   : 900px;
-$breakpoint-desktop-min  : 901px;
-$breakpoint-desktop-wide : 1260px;
+$breakpoint-mobile-max: 539px;
+$breakpoint-tablet-min: 540px;
+$breakpoint-tablet-max: 900px;
+$breakpoint-desktop-min: 901px;
+$breakpoint-desktop-wide: 1260px;
 
 // Container Sizes
-$container-width-min     : 320px;
-$container-width-max     : 1440px;
+$container-width-min: 320px;
+$container-width-max: 1440px;
 
 // z-index
-$z-index-default         : 1;
-$z-index-header          : 2;
-$z-index-loader          : 3;
-$z-index-modal-overlay   : 4;
-$z-index-modal-window    : 5;
+$z-index-default: 1;
+$z-index-header: 2;
+$z-index-loader: 3;
+$z-index-modal-overlay: 4;
+$z-index-modal-window: 5;
