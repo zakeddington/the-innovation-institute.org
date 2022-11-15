@@ -16,21 +16,21 @@ class VideoLoader {
 	initialize($container, objOptions) {
 
 		this.options = Object.assign({
-			iframeOptions  : '?rel =0',
-			iframeUrl      : 'https://www.youtube.com/embed/',
-			offsetTrigger  : 50,
-			dataAttrUrl    : 'video-id'
+			iframeOptions: '?rel=0',
+			iframeUrl: 'https://www.youtube.com/embed/',
+			offsetTrigger: 50,
+			dataAttrUrl: 'video-id'
 		}, objOptions);
 
 		this.ui = {
-			window         : $(window),
-			container      : $container,
+			window: $(window),
+			container: $container,
 		};
 
 		this.state = {
-			videoUrl       : this.ui.container.data(this.options.dataAttrUrl),
-			isVideoEmbeded : false,
-			namespace      : Date.now() * Math.random(),
+			videoUrl: this.ui.container.data(this.options.dataAttrUrl),
+			isVideoEmbeded: false,
+			namespace: Date.now() * Math.random(),
 		};
 
 		this._addEventListeners();
